@@ -16,6 +16,13 @@ function Profile() {
     //   } catch (err) {
     //     console.log(err)
     //   }
+    // const parsed = await res.json()
+    // if (res.status === 200) {
+    //   setInfo(parsed.info)
+    //   console.log(Info)
+    // } else {
+    //   console.log("GetEvents failed")
+    // }
     // }
   
   return (
@@ -30,21 +37,29 @@ function Profile() {
 
         <form onLoad={getUserInfo}>
               <input
-                type="number"
+                type="string"
                 value={userName}
                 placeholder="User Name"
                 onChange={evt => setUserName(evt.target.value)}
               />
               <input
-                type="number"
-                value={maxPrice}
-                placeholder="Max Price"
-                onChange={evt => setUserName(evt.target.value)}
+                type="string"
+                value={password}
+                placeholder="Password"
+                onChange={evt => setPassword(evt.target.value)}
               />
-              
               <button type="submit">Update Info</button>
             </form>
-  
+            
+            {(Info && Info.length > 0) ?
+            Info.map(e =>
+                    <div>
+                      <h1>{e.name}</h1>
+                      <h2>{e.password}</h2>
+                    </div>
+                  )
+                  :
+                  <p>No events found</p>}
       </div>
   );
 }
