@@ -60,6 +60,31 @@ function Profile() {
                   )
                   :
                   <p>No events found</p>}
+          <form onLoad={getUserInfo}>
+              <input
+                type="string"
+                value={userName}
+                placeholder="User Name"
+                onChange={evt => setUserName(evt.target.value)}
+              />
+              <input
+                type="string"
+                value={password}
+                placeholder="Password"
+                onChange={evt => setPassword(evt.target.value)}
+              />
+              <button type="submit">Update Info</button>
+            </form>
+            
+            {(Info && Info.length > 0) ?
+            Info.map(e =>
+                    <div>
+                      <h1>{e.name}</h1>
+                      <h2>{e.password}</h2>
+                    </div>
+                  )
+                  :
+                  <p>No events found</p>}
       </div>
   );
 }
