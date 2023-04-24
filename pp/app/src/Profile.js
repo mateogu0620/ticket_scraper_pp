@@ -27,8 +27,6 @@ function Profile() {
   
   return (
       <div className="Profile">
-        <Navbar/>
-
         <div>
           <h1 className="info">Ticket Scraper</h1>
           <br></br>
