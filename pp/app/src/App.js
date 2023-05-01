@@ -18,7 +18,7 @@ function App() {
   const handleSubmit = async (evt) => {
     evt.preventDefault()
     try {
-      const res = await fetch(process.env.REACT_APP_DEV_BACKEND_BASE_URL + "/get-events", {
+      const res = await fetch(process.env.REACT_APP_BACKEND_BASE_URL + "/get-events", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
