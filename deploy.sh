@@ -1,7 +1,7 @@
 #!/bin/bash
 # This shell script deploys a new version to a server.
 
-export PA_USER=SWEDemo
+export PA_USER=NiravGolyalla
 
 if [ -z "$DEMO_PA_PWD" ]
 then
@@ -11,5 +11,5 @@ fi
 
 echo "SSHing to PythonAnywhere."
 sshpass -p $DEMO_PA_PWD ssh -o "StrictHostKeyChecking no" $PA_USER@ssh.pythonanywhere.com << EOF
-    cd demo-repo3; ./rebuild.sh
+    cd ticket_scraper_pp; chmod u+x rebuild.sh; ./rebuild.sh
 EOF
