@@ -58,11 +58,11 @@ function App() {
               </Nav>
               <Nav>
               <NavDropdown title="Profile" id="collasible-nav-dropdown" >
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">User Info</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
-                    Another action
+                    User Settings
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">Saved Events</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
                     Log out
