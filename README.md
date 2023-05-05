@@ -6,7 +6,9 @@ This is the front-end repo of the TicketScraper App. You can find the code for t
 Run `make dev_env`
 
 # Running the front-end against the local backend
+Change directory to pp/app
 Run `./local.sh`
 
 # Running the front-end against the production backend
+Change directory to pp/app
 Run `./prod.sh`
